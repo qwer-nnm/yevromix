@@ -18,7 +18,7 @@
       },
       "edgeToEdgeEnabled": true,
       "googleServicesFile": "./google-services.json",
-      "versionCode": 8
+      "versionCode": 11
     },
     "web": {
       "bundler": "metro",
