@@ -5,7 +5,7 @@
   "build": {
     "production": {
       "channel": "production",
-      "node": "20.11.0",
+      "node": "20.18.1",
       "env": {
         "NPM_CONFIG_INSTALL_STRATEGY": "nested"
       },
