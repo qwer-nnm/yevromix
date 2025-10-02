@@ -57,16 +57,7 @@ export function useNotifications() {
         });
       }
 
-      // Для SDK 51+ потрібно передавати projectId
-      const projectId = (Constants as any)?.expoConfig?.extra?.eas?.projectId || (Constants as any)?.easConfig?.projectId;
-
-      if (!projectId) {
-        logger.warn('No EAS projectId found. Set expo.extra.eas.projectId in app.json');
-        setPermission(false);
-        return null;
-      }
-
-      const token = await Notifications.getExpoPushTokenAsync({ projectId });
+      const token = await Notifications.getExpoPushTokenAsync();
 
       setExpoPushToken(token.data);
       return token.data;
